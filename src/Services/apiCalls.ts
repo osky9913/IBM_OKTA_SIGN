@@ -28,7 +28,7 @@ export const GetEvents = (date: Date | null, setResult: Function): Request => {
 
     if (date !== null) {
       axiosInstance
-        .get((date.getMonth() + 1).toString() + "/" + date.getDay().toString())
+        .get((date.getMonth() + 1).toString() + "/" + date.getDate().toString())
         .then((response) => {
           setResult(response.data);
           setLoading(false);
